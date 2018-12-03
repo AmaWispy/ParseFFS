@@ -24,10 +24,11 @@ namespace ParserFSS
         {
             browser = new OpenQA.Selenium.Chrome.ChromeDriver();
             browser.Manage().Window.Maximize();
-            browser.Navigate().GoToUrl("http://google.com");
+            browser.Navigate().GoToUrl("https://www.dns-shop.ru/catalog/8a9ddfba20724e77/ssd-nakopiteli/");
 
-            IWebElement search = browser.FindElement(By.Name("q"));
-            search.SendKeys("как поднять ммр" + OpenQA.Selenium.Keys.Enter); //for git
+            IWebElement search = browser.FindElement(By.CssSelector("h3"));
+
+            textBox1.Text = search.Text; //for git
         }
     }
 }
