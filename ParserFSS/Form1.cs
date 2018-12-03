@@ -27,7 +27,7 @@ namespace ParserFSS
             browser.Navigate().GoToUrl("http://google.com");
 
             IWebElement search = browser.FindElement(By.Name("q"));
-            search.SendKeys("как поднять ммр" + OpenQA.Selenium.Keys.Enter);
+            search.SendKeys("как поднять ммр" + OpenQA.Selenium.Keys.Enter); //for git
         }
     }
 }
