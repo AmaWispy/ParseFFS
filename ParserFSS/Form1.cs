@@ -50,7 +50,7 @@ namespace ParserFSS
                         browser.Navigate().GoToUrl(textBox2.Text); //url https://www.dns-shop.ru/catalog/8a9ddfba20724e77/ssd-nakopiteli/
                         txtOutput = new StreamWriter(textBox3.Text);
                         List<IWebElement> pages = browser.FindElements(By.CssSelector("span[data-page-number]")).ToList();
-                        int firstPage = int.Parse(pages[2].Text);
+                        int firstPage = int.Parse(pages[2].Text + ".txt");
                         pages = null;
                         for (int k = firstPage; k < int.Parse(textBox1.Text) + firstPage; k++)
                         {
