@@ -48,9 +48,9 @@ namespace ParserFSS
                         browser = new OpenQA.Selenium.Chrome.ChromeDriver();
                         browser.Manage().Window.Maximize();
                         browser.Navigate().GoToUrl(textBox2.Text); //url https://www.dns-shop.ru/catalog/8a9ddfba20724e77/ssd-nakopiteli/
-                        txtOutput = new StreamWriter(textBox3.Text);
+                        txtOutput = new StreamWriter(textBox3.Text + ".txt");
                         List<IWebElement> pages = browser.FindElements(By.CssSelector("span[data-page-number]")).ToList();
-                        int firstPage = int.Parse(pages[2].Text + ".txt");
+                        int firstPage = int.Parse(pages[2].Text);
                         pages = null;
                         for (int k = firstPage; k < int.Parse(textBox1.Text) + firstPage; k++)
                         {
