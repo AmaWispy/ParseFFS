@@ -71,7 +71,6 @@ namespace ParserFSS
                             {
                                 txtOutput.WriteLine(products[i].Text + " cost:" + costs[i].Text.Replace(" ", "") + " /cost");
                                 //Invoke(txtChanger, productsSSD[i].Text); для работы с графическими элементами из неосновного потока
-                                //textBox1.Invoke(new Action<string>((s) textBox1.Text = productsSSD[i].Text + Environment.NewLine, n));
                                 //textBox1.AppendText(productsSSD[i].Text + Environment.NewLine);
                             }
                             pages = null;
