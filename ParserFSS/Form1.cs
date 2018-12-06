@@ -76,6 +76,7 @@ namespace ParserFSS
                             pages = null;
                         }
                         txtOutput.Close();
+                        browser.Quit();
                         MessageBox.Show("Сбор товаров завершен");
                     }
                     else { MessageBox.Show("Введите имя файла вывода без .txt", "System.Error"); textBox3.Text = "Введите имя файла вывода без .txt"; }
